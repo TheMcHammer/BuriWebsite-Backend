@@ -1,0 +1,17 @@
+{%extends 'get_quote/base.html'%}
+
+{%block body%}
+<h1>{{client.company}}</h1>
+<h3>{{client.name}}</h3>
+
+	{% csrf_token %}
+	{% for commodity in client.commodity_set.all %}
+		{{ commodity.commodity_type }}
+		{% if commodity.is_clear_forward %}
+			<p> - cleared/forwarded </p>
+		{% endif %}
+		<br>
+	{% endfor %}
+
+
+{%endblock%}

@@ -1,0 +1,32 @@
+{%extends 'get_quote/base.html'%}
+
+{%block body%}
+
+	<h3>Here are all the clients<h3>
+	<div class="row">
+		{% for client in all_clients %}
+		
+			<div class="col-sm-4 col-lg-2">
+				<div class="thumbnail">
+				
+					<div class="caption">
+						<h2>{{ client.company }}</h2>
+						<h4>{{ client.name }}</h4>
+						
+						<a href="{%url 'get_quote:detail' client.id %}" class="btn btn-primary btn-sm">View Details</a>
+						
+						<!-- delete -->
+						<form action="{% url 'get_quote:client-delete' client.id %}" method="post" style="display: inline;">
+							{% csrf_token %}
+							<input type="hidden" name="album_id" value="{{ album.id }}"/>
+							<button type="submit" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-trash"></span>
+						</form>
+						
+					</div>	
+				</div>
+			</div>
+		{%endfor%}
+	</div>
+	
+{%endblock%}
