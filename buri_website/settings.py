@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+	'contactus',
+	'netfleet',
+	'home',
 	'get_quote.apps.GetQuoteConfig',
     'django.contrib.admin',
     'django.contrib.auth',

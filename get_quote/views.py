@@ -12,7 +12,7 @@ class IndexView(generic.ListView):
 		
 class DetailView(generic.DetailView):
 	model = Client
-	template_name = "get_quote/detail.html"
+	template_name = "get_quote/work_clients.html"
 	
 class ClientCreate(CreateView):
 	model = Client

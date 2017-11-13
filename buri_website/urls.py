@@ -19,4 +19,10 @@ from django.contrib import admin
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
     url(r'^get_quote/', include('get_quote.urls')),
+	url(r'^home/', include('home.urls')),
+	url(r'^', include('home.urls')),
+	url(r'^netfleet/', include('netfleet.urls')),
+	url(r'^', include('netfleet.urls')),
+	url(r'^contactus/', include('contactus.urls')),
+	url(r'^', include('contactus.urls')),
 ]
