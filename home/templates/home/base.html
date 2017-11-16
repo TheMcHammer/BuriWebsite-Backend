@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% load staticfiles %}
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/buristyle.css"/>
+	<link rel="stylesheet" href="{%static 'home/font-awesome/css/font-awesome.min.css'%}"/>
 	<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -39,26 +38,31 @@
 			</div>
 		</div>
 	</nav>
+	{% block body %}
+	{% endblock %}
 	
-	<div class="footer navbar-fixed-bottom">
+	<footer class="container-fluid text-center">
 		<div class="row">
 			<div class="col-sm-6">
 				<h4>Contact Us</h3>
-				<br>
+				
 				<h4>our address and contact info here</h4>
 			</div>
 			<div class="col-sm-3">
 				<h3>Connect</h3>
-				<a href="https://www.facebook.com/search/str/buri+transporters+company/keywords_search?ref=eyJzaWQiOiIwLjQ5MTcxODQyNTk1NzAwNzkiLCJxcyI6IkpUVkNKVEl5WW5WeWFTVXlNSFJ5WVc1emNHOXlkR1Z5Y3lVeU1HTnZiWEJoYm5rbE1qSWxOVVEiLCJndiI6ImJlZTA5ZjkzZmE3MzJjZmE1OWExY2I2ZDlmNDUwZDM4OTI0MjRlNDkiLCJlbnRfaWRzIjpbMzAyNDc5NTU2NjIxNzIyXX0" class="fa fa-facebook"></a> 
+				<a href="https://www.facebook.com/buritransporterscompany/" class="fa fa-facebook"></a> 
 			</div>
 			<div class="col-sm-3">
 				<img src = "{% static 'home/images/buri_logo.jpg' %}" id="logo">
 			</div>
 		</div>
-	</div>
+		<!--<a href="#myPage" title="To Top">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>-->
+	</footer>
 	
-	{% block body %}
-	{% endblock %}
+	
 	
 </body>
 
