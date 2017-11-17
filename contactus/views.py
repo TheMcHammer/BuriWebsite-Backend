@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Contact
+from django.views.generic.edit import CreateView
 
-def index(request):
-	return render(request, 'contactus/contact.html')
+class ContactCreate(CreateView):
+    model = Contact
+    fields = ['first_name','second_name','address','county','town','email','comment']
 	
-def quote(request):
-	return render(request, 'contactus/quotation.html')
+	

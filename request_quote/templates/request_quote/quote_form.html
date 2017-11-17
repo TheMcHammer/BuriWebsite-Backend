@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+
+{% load staticfiles%}
+	<form action="" method="post" class='form'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Sumbit" />
+	</form>
+{% endblock%}

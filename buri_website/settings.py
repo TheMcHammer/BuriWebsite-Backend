@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-	'contactus',
+	'request_quote',
+	'contactus.apps.ContactusConfig',
 	'netfleet',
 	'home',
 	'get_quote.apps.GetQuoteConfig',
