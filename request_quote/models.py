@@ -13,3 +13,9 @@ class Quote(models.Model):
 	is_clear_forward = models.BooleanField(default=False)
 	pick_from = models.CharField(max_length=300)
 	deliver_to = models.CharField(max_length=300)
+	
+	def get_absolute_url(self):
+		return reverse('quoteRequest')
+		
+	def __str__(self):
+		return self.company + ' - ' + self.address + ' - ' + self.commodity_type

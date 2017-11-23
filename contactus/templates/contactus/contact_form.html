@@ -1,10 +1,12 @@
 {% extends 'home/base.html' %}
 
 {% block body %}
-
-{% load staticfiles%}
-	<form action="" method="post" class='form'>{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save" />
-	</form>
+<div class="container text-center">
+	<form action="" method="post" class='aform'>{% csrf_token %}
+		<h1>Contact Us</h1><br>
+		{{ form.as_p }}
+		<input type="submit" value="Submit" />
+	</form>	
+</div>
 {% endblock%}
+	

@@ -26,4 +26,5 @@ urlpatterns = [
 	url(r'^contactus/', include('contactus.urls')),
 	url(r'^', include('contactus.urls')),
 	url(r'^request_quote/', include('request_quote.urls')),
+	url(r'^', include('request_quote.urls')),
 ]
